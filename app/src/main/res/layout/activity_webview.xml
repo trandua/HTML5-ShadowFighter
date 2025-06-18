@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1D0D27">
+    <!-- WebView chính -->
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="100px"
+        android:layout_marginBottom="150px"/>
+    <!-- Layout ngang đè lên WebView -->
+    <LinearLayout
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@android:color/transparent"
+        android:alpha="0.0"
+        android:layout_alignParentTop="true">
+
+        <!-- Quảng cáo -->
+        <FrameLayout
+            android:id="@+id/ad_view_container"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:alpha="0.0"
+            android:background="#333333" />
+
+        <!-- ImageView -->
+        <ImageView
+            android:id="@+id/top_image"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".5"
+            android:alpha="0.0"
+            android:src="@drawable/ic_launcher_foreground"
+            android:scaleType="centerInside"
+            android:background="#555555" />
+    </LinearLayout>
+    <!-- Popup Sale -->
+    <RelativeLayout
+        android:id="@+id/popup_sale_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#B3000000"
+        android:gravity="center"
+        android:padding="16dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="gone">
+
+        <!-- Nền chính của popup -->
+        <LinearLayout
+            android:id="@+id/popup_container"
+            android:layout_width="400dp"
+            android:layout_height="600dp"
+            android:background="@drawable/bgpopup"
+            android:orientation="vertical"
+            android:padding="0dp">
+
+            <!-- Tiêu đề và nút Close -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="65dp">
+
+                <ImageButton
+                    android:id="@+id/btn_close"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="Close"
+                    android:scaleType="fitEnd"
+                    android:src="@drawable/close" />
+            </RelativeLayout>
+
+            <!-- LinearLayout dọc để hiển thị các gói coin -->
+            <LinearLayout
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="0dp"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+                <!-- Gói 1: 100 coins, $0.99 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/bg2"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:id="@+id/iv_coin_1"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_marginLeft="-10dp"
+                        android:src="@drawable/ic_coin_100" />
+
+                    <TextView
+                        android:shadowColor="#FF000000"
+                        android:shadowDx="2"
+                        android:shadowDy="2"
+                        android:shadowRadius="4"
+                        android:id="@+id/tv_coin_quantity_1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:padding="8dp"
+                        android:text="100"
+                        android:textColor="@android:color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:shadowColor="#FF000000"
+                            android:shadowDx="2"
+                            android:shadowDy="2"
+                            android:shadowRadius="4"
+                            android:id="@+id/btn_purchase_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/buybtn"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="10dp"
+                            android:text="Buy"
+                            android:textColor="@android:color/white"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Gói 2: 200 coins, $1.99 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/bg2"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:id="@+id/iv_coin_2"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_marginLeft="-10dp"
+                        android:src="@drawable/ic_coin_200" />
+
+                    <TextView
+                        android:shadowColor="#FF000000"
+                        android:shadowDx="2"
+                        android:shadowDy="2"
+                        android:shadowRadius="4"
+                        android:id="@+id/tv_coin_quantity_2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:padding="8dp"
+                        android:text="200"
+                        android:textColor="@android:color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:shadowColor="#FF000000"
+                            android:shadowDx="2"
+                            android:shadowDy="2"
+                            android:shadowRadius="4"
+                            android:id="@+id/btn_purchase_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/buybtn"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="10dp"
+                            android:text="Buy"
+                            android:textColor="@android:color/white"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Gói 3: 500 coins, $4.99 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/bg2"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:id="@+id/iv_coin_3"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_marginLeft="-10dp"
+                        android:src="@drawable/ic_coin_300" />
+
+                    <TextView
+                        android:shadowColor="#FF000000"
+                        android:shadowDx="2"
+                        android:shadowDy="2"
+                        android:shadowRadius="4"
+                        android:id="@+id/tv_coin_quantity_3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:padding="8dp"
+                        android:text="500"
+                        android:textColor="@android:color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:shadowColor="#FF000000"
+                            android:shadowDx="2"
+                            android:shadowDy="2"
+                            android:shadowRadius="4"
+                            android:id="@+id/btn_purchase_3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/buybtn"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="10dp"
+                            android:text="Buy"
+                            android:textColor="@android:color/white"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Gói 4: 1000 coins, $9.99 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/bg2"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:id="@+id/iv_coin_4"
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:layout_marginLeft="-10dp"
+                        android:src="@drawable/ic_coin_400" />
+
+                    <TextView
+                        android:shadowColor="#FF000000"
+                        android:shadowDx="2"
+                        android:shadowDy="2"
+                        android:shadowRadius="4"
+                        android:id="@+id/tv_coin_quantity_4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:padding="8dp"
+                        android:text="1000"
+                        android:textColor="@android:color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:shadowColor="#FF000000"
+                            android:shadowDx="2"
+                            android:shadowDy="2"
+                            android:shadowRadius="4"
+                            android:id="@+id/btn_purchase_4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/buybtn"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="10dp"
+                            android:text="Buy"
+                            android:textColor="@android:color/white"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Gói 5: 2000 coins, $19.99 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/bg2"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:layout_marginLeft="-10dp"
+                        android:id="@+id/iv_coin_5"
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        android:src="@drawable/ic_coin_500" />
+
+                    <TextView
+                        android:shadowColor="#FF000000"
+                        android:shadowDx="2"
+                        android:shadowDy="2"
+                        android:shadowRadius="4"
+                        android:id="@+id/tv_coin_quantity_5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:padding="8dp"
+                        android:text="2000"
+                        android:textColor="@android:color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:shadowColor="#FF000000"
+                            android:shadowDx="2"
+                            android:shadowDy="2"
+                            android:shadowRadius="4"
+                            android:id="@+id/btn_purchase_5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/buybtn"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="10dp"
+                            android:text="Buy"
+                            android:textColor="@android:color/white"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Gói 6: 5000 coins, $49.99 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/bg2"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:layout_marginLeft="-10dp"
+                        android:id="@+id/iv_coin_6"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/ic_coin_600" />
+
+                    <TextView
+                        android:shadowColor="#FF000000"
+                        android:shadowDx="2"
+                        android:shadowDy="2"
+                        android:shadowRadius="4"
+                        android:id="@+id/tv_coin_quantity_6"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:padding="8dp"
+                        android:text="5000"
+                        android:textColor="@android:color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:shadowColor="#FF000000"
+                            android:shadowDx="2"
+                            android:shadowDy="2"
+                            android:shadowRadius="4"
+                            android:id="@+id/btn_purchase_6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/buybtn"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="10dp"
+                            android:text="Buy"
+                            android:textColor="@android:color/white"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <!-- Dòng text với icon ở bên phải -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tv_remove_ads_message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Any purchase removes random ads."
+                    android:textColor="#FFFF00"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="6dp"
+                    android:src="@drawable/icon_ad"
+                android:contentDescription="No ads icon" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <!-- Overlay và ProgressBar để hiển thị khi đang xử lý giao dịch -->
+    <RelativeLayout
+        android:id="@+id/loadingOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:background="#80000000">
+
+        <ProgressBar
+            android:id="@+id/loadingProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:indeterminate="true"
+            style="@android:style/Widget.ProgressBar.Large" />
+    </RelativeLayout>
+
+    <!-- Splash Image -->
+    <ImageView
+        android:id="@+id/fullscreenImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"
+        android:src="@drawable/overlay"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <!-- ProgressBar xoay tròn -->
+    <!-- ProgressBar cách bottom 300px -->
+    <ProgressBar
+        android:id="@+id/loadingSpinner"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="100dp"
+        android:indeterminate="true"
+        android:indeterminateTint="@android:color/white" />
+
+    <!-- TextView cách bottom 250px -->
+    <TextView
+        android:id="@+id/loadingText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dp"
+        android:text="Loading 1%"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

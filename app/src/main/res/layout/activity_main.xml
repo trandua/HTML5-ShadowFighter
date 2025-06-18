@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_main"
+    android:padding="16dp">
+
+    <!-- Thanh chứa nút Remove Ads & Sound -->
+    <LinearLayout
+        android:id="@+id/topButtonContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="end"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Nút Remove Ads -->
+        <ImageButton
+            android:id="@+id/btnRemoveAds"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ww"
+            android:contentDescription="Remove Ads"
+            android:padding="8dp"
+            android:scaleType="fitCenter"/> <!-- Đảm bảo icon vừa với ImageButton -->
+
+        <!-- Nút Sound -->
+        <ImageButton
+            android:id="@+id/btnSound"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/btn_sound_on"
+            android:contentDescription="Sound"
+            android:padding="8dp"
+            android:scaleType="fitCenter"/> <!-- Đảm bảo icon hiển thị đúng kích thước -->
+
+    </LinearLayout>
+
+    <!-- Tiêu đề (đặt ngay trên danh sách game) -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Choose Your Game"
+        android:textSize="30sp"
+        android:textColor="@color/titleTextColor"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/topButtonContainer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- Danh sách game (ở giữa màn hình) -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:padding="8dp"
+        android:layout_marginTop="10dp"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:layout_constraintBottom_toTopOf="@id/buttonContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.70"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        app:spanCount="3" /> <!-- Chiếm 55% màn hình -->
+
+    <!-- Thanh chứa nút SHARE & RATE -->
+    <LinearLayout
+        android:id="@+id/buttonContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="8dp"
+        android:layout_marginBottom="100px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Nút SHARE -->
+        <Button
+            android:id="@+id/btnShare"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="SHARE"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:backgroundTint="@color/buttonShare"
+            android:textColor="@android:color/white"
+            android:drawableLeft="@drawable/ic_share"
+            android:drawablePadding="8dp"
+            android:gravity="center"/>
+
+        <View android:layout_width="8dp" android:layout_height="match_parent"/>
+
+        <!-- Nút RATE -->
+        <Button
+            android:id="@+id/btnRate"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="RATE"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:backgroundTint="@color/buttonRate"
+            android:textColor="@android:color/white"
+            android:drawableLeft="@drawable/ic_star"
+            android:drawablePadding="8dp"
+            android:gravity="center"/>
+    </LinearLayout>
+    <FrameLayout
+        android:id="@+id/progressOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000"
+        android:visibility="gone"
+        android:fitsSystemWindows="true"> <!-- Chống bị padding từ cha -->>
+
+        <ProgressBar
+            android:id="@+id/progressBar1"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:layout_gravity="center"
+            android:progressDrawable="@null" />
+
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
