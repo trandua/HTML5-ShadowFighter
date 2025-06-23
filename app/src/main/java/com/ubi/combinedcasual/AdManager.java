@@ -26,8 +26,8 @@ public class AdManager {
         mMainActivity = mainActivity;
         hasRemoveAds = mBillingManager != null && mBillingManager.isPurchased("remove_ads");
         timeChecker = new TimeChecker();
-        adAdapter = new AdmobAdapter();
-//        adAdapter = new MAXAdapter();
+//        adAdapter = new AdmobAdapter();
+        adAdapter = new MAXAdapter();
 //        adAdapter = new IronsourceAdapter();
         adAdapter.initAds(mainActivity, frameLayout, true, hasRemoveAds);
     }

@@ -33,9 +33,9 @@ import com.ubi.combinedcasual.WebViewActivity;
 public class MAXAdapter extends AdAdapter {
 
     private String SDK_KEY = "uJa4sGbT3zSQ9zw2o_CzJrxzsUI682WXsNFOfDGoT0Z5SsqQSWN52AZi7P0UtoN13VRe_MgEZodmMuzDKQwf0d";
-    private String ID_MAX_INTERS = "a45c90e7124a5f31";
-    private String ID_MAX_VIDEO = "cd19fbd70a3941ce";
-    private String ID_MAX_BANNER = "7f68d3605e2254a2";
+    private String ID_MAX_INTERS = "dd1fecc8367c22cb";
+    private String ID_MAX_VIDEO = "5dc8b02a4a981769";
+    private String ID_MAX_BANNER = "994b16d6778cd8dd";
     private MaxInterstitialAd max_InterstitialAd;
     private MaxRewardedAd max_RewardedAd;
     private MaxAdView maxAdView;

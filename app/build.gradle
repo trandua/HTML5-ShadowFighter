@@ -10,11 +10,11 @@ android {
     compileSdk 35
 
     defaultConfig {
-        applicationId "com.example.ubigamebase"
+        applicationId "com.ghost.fighters.broken.honor"
         minSdk 24
         targetSdk 35
-        versionCode 1
-        versionName "1.0"
+        versionCode 100
+        versionName "1.0.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -110,11 +110,11 @@ dependencies {
 
     //Kochava
     def kochava_tracker_version = "5.5.0"
-    implementation("com.kochava.tracker:tracker:$kochava_tracker_version") // Required
-    implementation("com.kochava.tracker:events:$kochava_tracker_version") // Optional
-    implementation("com.kochava.tracker:engagement:$kochava_tracker_version") // Optional
-    implementation("com.kochava.tracker:datapointnetwork:$kochava_tracker_version") // Optional
-    implementation("com.kochava.tracker:legacyreferrer:$kochava_tracker_version") // Optional
+//    implementation("com.kochava.tracker:tracker:$kochava_tracker_version") // Required
+//    implementation("com.kochava.tracker:events:$kochava_tracker_version") // Optional
+//    implementation("com.kochava.tracker:engagement:$kochava_tracker_version") // Optional
+//    implementation("com.kochava.tracker:datapointnetwork:$kochava_tracker_version") // Optional
+//    implementation("com.kochava.tracker:legacyreferrer:$kochava_tracker_version") // Optional
 
     // Các dependency liên quan đến Kochava
     implementation 'com.google.android.gms:play-services-ads-identifier:18.2.0'
@@ -154,5 +154,5 @@ dependencies {
     implementation 'com.vungle:vungle-ads:7.5.0'
     // Add Yandex Ads Network
     implementation 'com.unity3d.ads-mediation:yandex-adapter:4.3.8'
-    implementation 'com.yandex.android:mobileads:7.8.1'
+    implementation 'com.yandex.android:mobileads:7.14.0'
 }

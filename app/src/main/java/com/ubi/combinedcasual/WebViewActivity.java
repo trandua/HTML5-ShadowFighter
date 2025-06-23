@@ -36,7 +36,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.ubigamebase.R;
-import com.kochava.tracker.Tracker;
+//import com.kochava.tracker.Tracker;
 import com.ubi.combinedcasual.adapter.AdAdapter;
 
 import java.io.FileNotFoundException;
@@ -72,7 +72,7 @@ public class WebViewActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        Tracker.getInstance().startWithAppGuid(getApplicationContext(), "kotappywar-bpy0a6j");
+//        Tracker.getInstance().startWithAppGuid(getApplicationContext(), "kotappywar-bpy0a6j");
 
 //        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
