@@ -30,5 +30,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "UbiGameBase"
+rootProject.name = "HTML5-GhoshFighter"
 include ':app'
