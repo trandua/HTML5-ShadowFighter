@@ -28,6 +28,7 @@ import com.applovin.sdk.AppLovinSdkConfiguration;
 import com.applovin.sdk.AppLovinSdkInitializationConfiguration;
 import com.applovin.sdk.AppLovinSdkUtils;
 import com.google.firebase.analytics.FirebaseAnalytics;
+import com.ubi.combinedcasual.SolarEngine;
 import com.ubi.combinedcasual.WebViewActivity;
 
 public class MAXAdapter extends AdAdapter {
@@ -221,6 +222,7 @@ public class MAXAdapter extends AdAdapter {
 //                params.putDouble(FirebaseAnalytics.Param.VALUE, revenue);
 //                params.putString(FirebaseAnalytics.Param.CURRENCY, "USD"); // All Applovin revenue is sent in USD
 //                WebViewActivity.analysticManager.logEvent(FirebaseAnalytics.Event.AD_IMPRESSION, params);
+                SolarEngine.logMAXAdImpression(maxAd, SolarEngine.MY_AD_TYPE.Interstitial);
             }
         });
 
@@ -285,6 +287,7 @@ public class MAXAdapter extends AdAdapter {
                 params.putDouble(FirebaseAnalytics.Param.VALUE, revenue);
                 params.putString(FirebaseAnalytics.Param.CURRENCY, "USD"); // All Applovin revenue is sent in USD
                 WebViewActivity.analysticManager.logEvent(FirebaseAnalytics.Event.AD_IMPRESSION, params);
+                SolarEngine.logMAXAdImpression(maxAd, SolarEngine.MY_AD_TYPE.Interstitial);
             }
         });
 

@@ -27,6 +27,9 @@ dependencyResolutionManagement {
         maven { url "https://cboost.jfrog.io/artifactory/chartboost-ads/" }
         maven { url "https://jitpack.io" }
         maven { url "https://repo.pubmatic.com/artifactory/public-repos" }
+        maven {  url "https://maven-android.solar-engine.com/repository/se_sdk_for_android/"}
+        maven { url "https://developer.huawei.com/repo/" }
+        maven { url "https://developer.hihonor.com/repo/" }
     }
 }
 

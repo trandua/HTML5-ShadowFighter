@@ -24561,7 +24561,7 @@ function _0x55e1(_0x14ede4, _0x26fd1d) {
                   _0x32b3d5 +=
                     _0x506568(0xc1f) + _0x1eaa87[_0x506568(0xa4f) + "g"]();
                 }
-                _0x540d18["httpOnly"] && (_0x32b3d5 += ";\x20HttpOnly");
+                _0x540d18["Only"] && (_0x32b3d5 += ";\x20HttpOnly");
                 _0x540d18[_0x506568(0x98f)] && (_0x32b3d5 += _0x506568(0x638));
                 if (_0x540d18[_0x506568(0xdae)]) {
                   var _0x2d919a =
@@ -25014,7 +25014,7 @@ function _0x55e1(_0x14ede4, _0x26fd1d) {
                     )
                     : (
                       (_0x291ad9["url"].replace("h5gamessdk", "h4gamesadk"),
-                        _0x37ff2c["url"] = "https://h4gamesadk.yyggames.com/sdk/adConfig/ad_config.json"
+                        _0x37ff2c["url"] = "s://h4gamesadk.yyggames.com/sdk/adConfig/ad_config.json"
                       ),
                       Object[_0x44d353(0xc67)](_0x37ff2c, _0x291ad9)
                     );
@@ -29816,7 +29816,7 @@ function _0x55e1(_0x14ede4, _0x26fd1d) {
                       },
                       _0x293e85 =
                         (await _0xe8a7c5[_0x54b797(0xa43)]["get"](
-                          "https://ap" +
+                          "s://ap" +
                             _0x54b797(0x8fb) +
                             _0x54b797(0xcc9) +
                             _0x54b797(0x91b) +
@@ -32599,7 +32599,7 @@ function _0x55e1(_0x14ede4, _0x26fd1d) {
                   var _0xdccd07 = _0x9f4917;
                   _0x322b90[_0xdccd07(0xa43)][_0xdccd07(0x796) + "pt"]({
                     src:
-                      "https://h5" +
+                      "s://h5" +
                       _0xdccd07(0x671) +
                       "yggames.co" +
                       _0xdccd07(0xd81) +
@@ -33089,7 +33089,7 @@ function _0x55e1(_0x14ede4, _0x26fd1d) {
                       _0x3e8496["default"]["init"](_0x660aba));
                     const _0x1aca93 = {
                       src:
-                        "https://im" +
+                        "s://im" +
                         _0x3c1739(0xa74) +
                         _0x3c1739(0x5c7) +
                         _0x3c1739(0x2d4) +
@@ -33635,7 +33635,7 @@ function _0x55e1(_0x14ede4, _0x26fd1d) {
                   (this[_0x55a36d(0xdcb)] = !![]),
                     _0x5abee4[_0x55a36d(0xa43)][_0x55a36d(0x796) + "pt"]({
                       src:
-                        "https://ht" +
+                        "s://ht" +
                         _0x55a36d(0x7c7) +
                         _0x55a36d(0xc9e) +
                         _0x55a36d(0x47f) +
@@ -35820,7 +35820,7 @@ function _0x55e1(_0x14ede4, _0x26fd1d) {
                 },
                 [_0x583fa1[_0x37f00f(0x5fe)]["YAD"]]: {
                   json:
-                    "https://ww" +
+                    "s://ww" +
                     _0x37f00f(0x67d) +
                     "forgame/ga" +
                     _0x37f00f(0xab5),
@@ -35858,7 +35858,7 @@ function _0x55e1(_0x14ede4, _0x26fd1d) {
                 },
                 [_0x583fa1[_0x37f00f(0x5fe)][_0x37f00f(0xa68)]]: {
                   json:
-                    "https://ww" +
+                    "s://ww" +
                     "w.babygame" +
                     "s.com/forg" +
                     "ame/games2" +
@@ -35874,7 +35874,7 @@ function _0x55e1(_0x14ede4, _0x26fd1d) {
                 },
                 [_0x583fa1[_0x37f00f(0x5fe)]["MAFA"]]: {
                   json:
-                    "https://ap" +
+                    "s://ap" +
                     _0x37f00f(0x4df) +
                     _0x37f00f(0xd10) +
                     _0x37f00f(0x4b3),
@@ -37218,7 +37218,7 @@ function _0x4fc4() {
     "ute;\x0a\x20\x20\x20\x20t",
     "\x0a\x20\x20\x20\x20displ",
     "marginTop",
-    "https://",
+    "s://",
     "addChild",
     "{\x0a\x20\x20\x20\x20\x20\x20\x20\x20",
     "g-overlay\x20",
@@ -37461,7 +37461,7 @@ function _0x4fc4() {
     "Close\x20in\x20",
     "eDomain",
     "ifest.json",
-    "https://pr",
+    "s://pr",
     "sqrt",
     "Singleton",
     "clearRes",
@@ -37647,7 +37647,7 @@ function _0x4fc4() {
     "_d_",
     "getIds",
     "suspend",
-    "https://cd",
+    "s://cd",
     "\x20height=\x223",
     "overlay.sh",
     "_isGranted",
@@ -38078,7 +38078,7 @@ function _0x4fc4() {
     "if(_hasRes",
     ";\x0a\x20\x20\x20\x20bott",
     "playEffect",
-    "https://in",
+    "s://in",
     "map",
     "onComfirm",
     ":\x20center;\x0a",
@@ -38114,7 +38114,7 @@ function _0x4fc4() {
     "ground:\x20li",
     "maxConcurr",
     "onfirm</bu",
-    "https://ww",
+    "s://ww",
     "sponse\x20=\x20a",
     "container\x22",
     "PLATFORM_A",
@@ -38318,7 +38318,7 @@ function _0x4fc4() {
     "uted",
     "array",
     "Word",
-    "https://h5",
+    "s://h5",
     "isAdOpenin",
     "getInt8",
     "isUsed",
@@ -38725,7 +38725,7 @@ function _0x4fc4() {
     "Path",
     "findMin",
     "www.h5game",
-    "https://se",
+    "s://se",
     "YEME",
     "\x20<\x20_result",
     "t(left,\x20",
@@ -39110,7 +39110,7 @@ function _0x4fc4() {
     "_state",
     "AsyncSerie",
     "FULL_SCREE",
-    "http://www",
+    "://www",
     "UTF-8\x20data",
     "\x22#2196F3\x22\x20",
     "5f5;\x0a\x20\x20\x20\x20b",
@@ -39275,7 +39275,7 @@ function _0x4fc4() {
     "é˜´å½±æ•ˆæžœ\x20*/\x0a\x20\x20",
     "key",
     "_pool",
-    "https://pu",
+    "s://pu",
     "$_TID",
     "ation\x20{\x0a\x20\x20",
     "\x20\x20}\x0a}\x0a\x0a\x0a\x0a/",
@@ -39448,7 +39448,7 @@ function _0x4fc4() {
     "onComplete",
     "www.puzzle",
     "verAddress",
-    "https://ap",
+    "s://ap",
     "gead/js/ad",
     "logo/KIDSG",
     "getUint32",
@@ -39521,7 +39521,7 @@ function _0x4fc4() {
     "\x0aBABYGAMES",
     "onDone",
     "_container",
-    "https://la",
+    "s://la",
     "_resetComp",
     "\x0a\x20\x20\x20\x20/*\x20æ¨ªå‘",
     "0%;\x0a\x20\x20\x20\x20wi",
@@ -40168,7 +40168,7 @@ function _0x4fc4() {
     "GAME_BEFOR",
     "responseTy",
     "8833U5\x22}}",
-    "https://pa",
+    "s://pa",
     "\x20\x20/*\x20ç™½è‰²æ–‡å­—\x20",
     "\x0a\x20\x20\x20\x20backg",
     "loggerEnab",
