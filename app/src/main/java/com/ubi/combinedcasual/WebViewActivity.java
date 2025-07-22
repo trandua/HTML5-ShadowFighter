@@ -363,6 +363,10 @@ public class WebViewActivity extends Activity {
                                 View.SYSTEM_UI_FLAG_FULLSCREEN
                 );
             }
+
+            if (webView != null) {
+                webView.post(() -> webView.evaluateJavascript("javascript:if (typeof onActivityResume !== 'undefined') onActivityResume();", null));
+            }
         }
     }
 
@@ -850,6 +854,10 @@ public class WebViewActivity extends Activity {
 
         String jsCode = "javascript:applyPreservedVisibleSize2()";
         webView.evaluateJavascript(jsCode, null);
+
+        if (webView != null) {
+            webView.post(() -> webView.evaluateJavascript("javascript:if (typeof onActivityResume !== 'undefined') onActivityResume();", null));
+        }
     }
     protected void onPause() {
         super.onPause();

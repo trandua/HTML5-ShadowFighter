@@ -126,6 +126,11 @@
         }
     }
 
+    // Hàm gọi từ Android khi Activity resume
+    window.onActivityResume = function() {
+        resizeCanvas();
+    };
+
     // Gọi resizeCanvas khi tải trang và khi cửa sổ thay đổi kích thước
     window.addEventListener('resize', resizeCanvas);
     window.addEventListener('load', resizeCanvas);
