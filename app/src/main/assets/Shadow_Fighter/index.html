@@ -44,12 +44,12 @@
         }
 
         #Game {
-            position: relative;
             display: flex;
             justify-content: center;
             align-items: center;
             width: 100vw;
             height: 100vh;
+            position: relative;
         }
 
         #GameCanvas {
@@ -87,25 +87,25 @@
 <script type="text/javascript">
     // console.timeEnd = console.time = console.error = console.log = console.info = console.warn = function () { };
 
-    // Hàm điều chỉnh kích thước canvas, ưu tiên fit chiều ngang và căn giữa
+    // Hàm điều chỉnh kích thước canvas để luôn căn giữa và giữ tỷ lệ 16:9
     function resizeCanvas() {
         const canvas = document.getElementById('GameCanvas');
         const gameContainer = document.getElementById('Game');
         const aspectRatio = 1280 / 720; // Tỷ lệ khung hình 16:9
         const windowWidth = window.innerWidth;
         const windowHeight = window.innerHeight;
-        const windowAspectRatio = windowWidth / windowHeight;
 
         let canvasWidth, canvasHeight;
 
-        // Ưu tiên fit chiều ngang (width = 100vw)
-        canvasWidth = windowWidth;
-        canvasHeight = canvasWidth / aspectRatio;
-
-        // Nếu chiều cao vượt quá màn hình, điều chỉnh lại để fit chiều cao
-        if (canvasHeight > windowHeight) {
+        // Tính kích thước dựa trên tỷ lệ màn hình
+        if (windowWidth / windowHeight > aspectRatio) {
+            // Màn hình rộng hơn tỷ lệ 16:9, fit theo chiều cao
             canvasHeight = windowHeight;
             canvasWidth = canvasHeight * aspectRatio;
+        } else {
+            // Màn hình hẹp hơn tỷ lệ 16:9, fit theo chiều ngang
+            canvasWidth = windowWidth;
+            canvasHeight = canvasWidth / aspectRatio;
         }
 
         // Đảm bảo kích thước không vượt quá màn hình
@@ -120,8 +120,10 @@
         gameContainer.style.width = `${canvasWidth}px`;
         gameContainer.style.height = `${canvasHeight}px`;
 
-        // Gọi hàm resolution.init với kích thước thực tế
-        resolution.init(canvasWidth, canvasHeight);
+        // Gọi resolution.init với kích thước thực tế
+        if (typeof resolution !== 'undefined' && resolution.init) {
+            resolution.init(canvasWidth, canvasHeight);
+        }
     }
 
     // Gọi resizeCanvas khi tải trang và khi cửa sổ thay đổi kích thước
